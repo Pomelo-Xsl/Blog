@@ -1,0 +1,42 @@
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseCard from "../components/BaseCard.astro";
+import Collapse from "../components/blog/collapse.astro";
+import Diff from "../components/blog/diff.astro";
+import Error from "../components/blog/error.astro";
+import Info from "../components/blog/info.astro";
+import Kbd from "../components/blog/kbd.astro";
+import Success from "../components/blog/success.astro";
+import Warning from "../components/blog/warning.astro";
+import TimeLine from "../components/page/TimeLine.astro";
+import LinkCard from "../components/page/LinkCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import ProjectJS from "../components/ProjectJS.astro";
+
+<BaseLayout title="项目">
+  <BaseCard title="Project">
+  # 💡 项目 / Project
+
+---
+
+  </BaseCard>
+  <div class="mt-8 mb-8">
+    <ProjectCard
+      title="NFLS 论坛"
+      desc="一个专门为NFLSer们搭建的论坛"
+      url="http://nflser.top"
+      image="https://pic.imgdb.cn/item/66c86e1fd9c307b7e9799e23.png"
+      badge="网站 - PHP"
+      github="1"
+      target="_blank"
+    />
+    <ProjectCard
+      title="Fastrans"
+      desc="一个美观简约、方便快速的翻译器。目前支持微必应、有道、搜狗翻译，以及中英互译，显示音标等功能。"
+      url="https://github.com/YaoqxCN/Fastrans"
+      image="https://pic.imgdb.cn/item/66cbee80d9c307b7e9f84d1b.png"
+      badge="Python"
+      target="_blank"
+    />
+  </div>
+</BaseLayout>
+<ProjectJS />
