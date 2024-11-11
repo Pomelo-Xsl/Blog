@@ -19,7 +19,7 @@ import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://yaoqx.pages.dev",
+  site: "https://Xiesl.pages.dev",
   style: {
     scss: {
       includePaths: ["./src/styles"],

@@ -2,17 +2,17 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 // Site title and description
-export const SITE_TAB = "Yaoqx";
-export const SITE_TITLE = "Yaoqx 💤";
-export const SITE_DESCRIPTION = "Yaoqx 的个人主页";
+export const SITE_TAB = "Xiesl";
+export const SITE_TITLE = "Xiesl 💤";
+export const SITE_DESCRIPTION = "Xiesl 的个人主页";
 export const DATE_FORMAT = "YYYY-MM-DD";
 
 // User profile information
-export const USER_NAME = "Yaoqx";
+export const USER_NAME = "Xiesl";
 export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
-export const SERVER_URL = "https://yaoqx-comment.netlify.app/.netlify/functions/comment";
+export const SERVER_URL = "https://Xiesl-comment.netlify.app/.netlify/functions/comment";
 
 
 // Some informative text on the site
@@ -95,13 +95,13 @@ export const menuItems = [
 // Social media and contact icons
 export const socialIcons = [
   {
-    href: "https://github.com/YaoqxCN",
+    href: "https://github.com/Pomelo-Xsl",
     ariaLabel: "Github",
     title: "Github",
     svg: "github",
   },
   {
-    href: "https://space.bilibili.com/2064579635",
+    href: "https://space.bilibili.com/535598912?spm_id_from=333.337.0.0",
     ariaLabel: "BiliBili",
     title: "BiliBili",
     svg: "bilibili",
