@@ -84,10 +84,10 @@ export const menuItems = [
     target: "_self",
   }, // Friends page
   {
-    id: "contact",
-    text: "邮箱",
-    href: "mailto:1064245198@qq.com",
-    svg: "contact",
+    id: "support",
+    text: "友情赞助",
+    href: "/support",
+    svg: "support",
     target: "_self",
   }, // Friends page
 ];
@@ -107,16 +107,16 @@ export const socialIcons = [
     svg: "bilibili",
   },
   {
-    href: "/support",
-    ariaLabel: "Support",
-    title: "Support me",
-    svg: "support",
+    href: "https://www.douyin.com/user/MS4wLjABAAAAS2pbeAfUlY1-k8T7H7B3l_lAls5kliEV21XBmLnh7N8?from_tab_name=main",
+    ariaLabel: "Tiktok",
+    title: "Tiktok",
+    svg: "tiktok",
     target: "_self",
   },
   {
-    href: "/rss.xml",
-    ariaLabel: "RSS",
-    title: "RSS",
-    svg: "rss",
+    href: "https://m.weibo.cn/u/7239212055?luicode=10000011&lfid=1076037239212055",
+    ariaLabel: "WeiBo",
+    title: "WeiBo",
+    svg: "weibo",
   }
 ];

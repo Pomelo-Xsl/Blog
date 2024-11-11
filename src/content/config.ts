@@ -1,3 +1,4 @@
+//定义了一个名为 blog 的内容集合
 import { defineCollection, z } from 'astro:content';
 
 const blog = defineCollection({
