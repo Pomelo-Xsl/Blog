@@ -12,7 +12,7 @@ export const USER_NAME = "Xiesl";
 export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
-export const SERVER_URL = "https://Xiesl-comment.netlify.app/.netlify/functions/comment";
+// export const SERVER_URL = "https://Xiesl-comment.netlify.app/.netlify/functions/comment";
 
 
 // Some informative text on the site
@@ -47,12 +47,12 @@ export const menuItems = [
         target: "_self",
       }, // All blog
       {
-        id: "tech",
-        text: "技术",
-        href: "/blog/categories/技术",
+        id: "work",
+        text: "工作",
+        href: "/blog/categories/工作",
         svg: "heart",
         target: "_self",
-      }, // Technology category
+      }, // Work category
       {
         id: "study",
         text: "学习",
@@ -67,6 +67,13 @@ export const menuItems = [
         svg: "cube",
         target: "_self",
       }, // Life category
+      {
+        id: "fitness",
+        text: "健身",
+        href: "/blog/categories/健身",
+        svg: "bodybuilding",
+        target: "_self",
+      }, //Bodybuilding category
     ],
   }, // Blog page with sub-items
   {
