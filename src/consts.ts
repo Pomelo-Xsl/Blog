@@ -74,6 +74,13 @@ export const menuItems = [
         svg: "bodybuilding",
         target: "_self",
       }, //Bodybuilding category
+      {
+        id: "skill",
+        text: "技能",
+        href: "/blog/categories/技能",
+        svg: "skill",
+        target: "_self",
+      }, //Bo
     ],
   }, // Blog page with sub-items
   {
