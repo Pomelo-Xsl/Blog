@@ -152,107 +152,23 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"2024-07-07.md": {
-	id: "2024-07-07.md";
-  slug: "2024-07-07";
+"2021-11-12(生活篇).md": {
+	id: "2021-11-12(生活篇).md";
+  slug: "2021-11-12生活篇";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"2024-08-05.md": {
-	id: "2024-08-05.md";
-  slug: "2024-08-05";
+"2024-11-12(学习篇).md": {
+	id: "2024-11-12(学习篇).md";
+  slug: "2024-11-12学习篇";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"2024-08-07.md": {
-	id: "2024-08-07.md";
-  slug: "2024-08-07";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"2024-08-09.md": {
-	id: "2024-08-09.md";
-  slug: "2024-08-09";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"2024-08-10.md": {
-	id: "2024-08-10.md";
-  slug: "2024-08-10";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"2024-08-15.md": {
-	id: "2024-08-15.md";
-  slug: "2024-08-15";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"2024-08-21.md": {
-	id: "2024-08-21.md";
-  slug: "2024-08-21";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"2024-08-24.md": {
-	id: "2024-08-24.md";
-  slug: "2024-08-24";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"2024-08-26.mdx": {
-	id: "2024-08-26.mdx";
-  slug: "2024-08-26";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] };
-"2024-08-29.mdx": {
-	id: "2024-08-29.mdx";
-  slug: "2024-08-29";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] };
-"2024-08-31.mdx": {
-	id: "2024-08-31.mdx";
-  slug: "2024-08-31";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] };
-"2024-09-03.md": {
-	id: "2024-09-03.md";
-  slug: "2024-09-03";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"2024-09-04.md": {
-	id: "2024-09-04.md";
-  slug: "2024-09-04";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"2024-09-07.md": {
-	id: "2024-09-07.md";
-  slug: "2024-09-07";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"2024-9-15.md": {
-	id: "2024-9-15.md";
-  slug: "2024-9-15";
+"2024-11-12（健身篇）.md": {
+	id: "2024-11-12（健身篇）.md";
+  slug: "2024-11-12健身篇";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
