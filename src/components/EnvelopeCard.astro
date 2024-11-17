@@ -3,6 +3,8 @@ import dayjs from "dayjs";
 import { Image } from "astro:assets";
 import { infoTest } from "../consts";
 import type { EnvelopeInfo } from "../types";
+import defineConfig from "../../astro.config.mjs";
+
 const { title, desc, image, pubDate, badge, categories, tags, url } =
   Astro.props as EnvelopeInfo;
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
@@ -35,7 +37,7 @@ const target = "_self";
               categories.map((categoroy) => (
                 <>
                   <a
-                    href={`/blog/categories/${categoroy}`}
+                    href={`${defineConfig.base}/blog/categories/${categoroy}`}
                     class="btn btn-xs btn-accent"
                   >
                     {categoroy}
@@ -53,7 +55,7 @@ const target = "_self";
             hasTags ? (
               tags.map((tag) => (
                 <>
-                  <a href={`/blog/tag/${tag}`} class="btn btn-xs btn-secondary">
+                  <a href={`${defineConfig.base}/blog/tag/${tag}`} class="btn btn-xs btn-secondary">
                     {tag}
                   </a>
                   <span>&thinsp;</span>

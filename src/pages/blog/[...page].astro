@@ -6,6 +6,7 @@ import BaseCard from "../../components/BaseCard.astro";
 import { getCollection } from "astro:content";
 import Search from "astro-pagefind/components/Search";
 import { infoTest } from "../../consts";
+import defineConfig from "../../../astro.config.mjs";
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
   const posts = await getCollection("blog");
@@ -62,7 +63,7 @@ const pageLinks = generatePageLinks(totalPages);
           title={post.data.title}
           image={post.data.image}
           desc={post.data.description}
-          url={"/blog/" + post.slug}
+          url={`${defineConfig.base}/blog/` + post.slug}
           pubDate={post.data.pubDate}
           badge={post.data.badge}
           categories={post.data.categories}

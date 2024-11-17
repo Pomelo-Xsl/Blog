@@ -5,6 +5,8 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
 import BaseCard from "../../../../components/BaseCard.astro";
 import { getCollection } from "astro:content";
 import { infoTest } from "../../../../consts";
+import defineConfig from "../../../../../astro.config.mjs";
+
 export async function getStaticPaths({ paginate }: { paginate: any }) {
   const all_posts = await getCollection("blog");
   const all_categories = [
@@ -111,8 +113,8 @@ const pageLinks = generatePageLinks(totalPages);
                           aria-label={hidden}
                           href={
                             hidden === "1"
-                              ? `/blog/categories/${params.category}`
-                              : `/blog/categories/${params.category}/${hidden}`
+                              ? `${defineConfig.base}/blog/categories/${params.category}`
+                              : `${defineConfig.base}/blog/categories/${params.category}/${hidden}`
                           }
                           class={`menu-item bg-base-100 ${hidden === page.current ? "btn-active" : ""}`}
                         >
@@ -128,8 +130,8 @@ const pageLinks = generatePageLinks(totalPages);
                   aria-label={link}
                   href={
                     link === "1"
-                      ? `/blog/categories/${params.category}`
-                      : `/blog/categories/${params.category}/${link}`
+                      ? `${defineConfig.base}/blog/categories/${params.category}`
+                      : `${defineConfig.base}/blog/categories/${params.category}/${link}`
                   }
                   class={`join-item btn bg-base-100 ${link === page.current ? "btn-active" : ""}`}
                 >
@@ -145,8 +147,8 @@ const pageLinks = generatePageLinks(totalPages);
               aria-label={link}
               href={
                 link === "1"
-                  ? `/blog/categories/${params.category}`
-                  : `/blog/categories/${params.category}/${link}`
+                  ? `${defineConfig.base}/blog/categories/${params.category}`
+                  : `${defineConfig.base}/blog/categories/${params.category}/${link}`
               }
               class={`join-item btn bg-base-100 ${link === page.current ? "btn-active" : ""}`}
             >
