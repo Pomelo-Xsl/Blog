@@ -9,6 +9,8 @@ import Success from "../components/blog/success.astro";
 import Warning from "../components/blog/warning.astro";
 import TimeLine from "../components/page/TimeLine.astro";
 import LinkCard from "../components/page/LinkCard.astro";
+import HomeImage from "../../public/home.webp";
+import defineConfig from "../../astro.config.mjs";
 
 <BaseLayout title="主页">
   <BaseCard title="Home">
@@ -24,7 +26,7 @@ import LinkCard from "../components/page/LinkCard.astro";
 
   </BaseCard>
 
-  <BaseCard title="Home" image="/home.webp">
+  <BaseCard title="Home" image={HomeImage}>
 
 # 🏠 主页 / Home
 ---
@@ -35,25 +37,25 @@ import LinkCard from "../components/page/LinkCard.astro";
   <LinkCard
     title="博客"
     desc="看到一些有趣的东西"
-    url="/blog"
+    url={`${defineConfig.base}/blog`}
     target = "_self"
   />
   <LinkCard
     title="项目"
     desc="想法的实现"
-    url="/project"
+    url={`${defineConfig.base}/project`}
     target = "_self"
   />
   <LinkCard
     title="关于"
     desc="关于我和网站"
-    url="/about"
+    url={`${defineConfig.base}/about`}
     target = "_self"
   />
   <LinkCard
     title="友链"
     desc="有趣的人"
-    url="/friend"
+    url={`${defineConfig.base}/friend`}
     target = "_self"
   />
 </div>

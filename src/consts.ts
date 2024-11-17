@@ -1,6 +1,7 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
-
+import defineConfig from "../astro.config.mjs";
+import PROFILE from "../public/profile.webp"
 // Site title and description
 export const SITE_TAB = "Xiesl";
 export const SITE_TITLE = "Xiesl 💤";
@@ -30,54 +31,54 @@ export const infoTest = {
 
 // Menu items for navigation
 export const menuItems = [
-  { id: "home", text: "主页", href: "/", svg: "home", target: "_self" }, // Home page
-  { id: "about", text: "关于", href: "/about", svg: "about", target: "_self" }, // About page
+  { id: "home", text: "主页", href: `${defineConfig.base}/`, svg: "home", target: "_self" }, // Home page
+  { id: "about", text: "关于", href: `${defineConfig.base}/about`, svg: "about", target: "_self" }, // About page
   {
     id: "blog",
     text: "博客",
-    href: "/blog",
+    href: `${defineConfig.base}/blog`,
     svg: "blog",
     target: "_self",
     subItems: [
       {
         id: "all",
         text: "全部",
-        href: "/blog",
+        href: `${defineConfig.base}/blog`,
         svg: "post",
         target: "_self",
       }, // All blog
       {
         id: "work",
         text: "工作",
-        href: "/blog/categories/工作",
+        href: `${defineConfig.base}/blog/categories/工作`,
         svg: "heart",
         target: "_self",
       }, // Work category
       {
         id: "study",
         text: "学习",
-        href: "/blog/categories/学习",
+        href: `${defineConfig.base}/blog/categories/学习`,
         svg: "book",
         target: "_self",
       }, // Study category
       {
         id: "life",
         text: "生活",
-        href: "/blog/categories/生活",
+        href: `${defineConfig.base}/blog/categories/生活`,
         svg: "cube",
         target: "_self",
       }, // Life category
       {
         id: "fitness",
         text: "健身",
-        href: "/blog/categories/健身",
+        href: `${defineConfig.base}/blog/categories/健身`,
         svg: "bodybuilding",
         target: "_self",
       }, //Bodybuilding category
       {
         id: "skill",
         text: "技能",
-        href: "/blog/categories/技能",
+        href: `${defineConfig.base}/blog/categories/技能`,
         svg: "skill",
         target: "_self",
       }, //Bo
@@ -86,21 +87,21 @@ export const menuItems = [
   {
     id: "project",
     text: "项目",
-    href: "/project",
+    href: `${defineConfig.base}/project`,
     svg: "project",
     target: "_self",
   }, // Projects page
   {
     id: "friend",
     text: "友情链接",
-    href: "/friend",
+    href: `${defineConfig.base}/friend`,
     svg: "friend",
     target: "_self",
   }, // Friends page
   {
     id: "support",
     text: "友情赞助",
-    href: "/support",
+    href: `${defineConfig.base}/support`,
     svg: "support",
     target: "_self",
   }, // Friends page
