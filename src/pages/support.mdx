@@ -9,6 +9,7 @@ import Success from "../components/blog/success.astro";
 import Warning from "../components/blog/warning.astro";
 import TimeLine from "../components/page/TimeLine.astro";
 import LinkCard from "../components/page/LinkCard.astro";
+import defineConfig from "../../astro.config.mjs";
 
 <BaseLayout title="支持">
   <BaseCard title="Support">
@@ -24,7 +25,7 @@ import LinkCard from "../components/page/LinkCard.astro";
 
 # 
 
-<img src="../../public/support.jpg" height="700" width="500"></img>
+<img src={`${defineConfig.base}/public/support.jpg`} height="700" width="500"></img>
 
 
   </BaseCard>
