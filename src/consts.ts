@@ -10,7 +10,7 @@ export const DATE_FORMAT = "YYYY-MM-DD";
 
 // User profile information
 export const USER_NAME = "Xiesl";
-export const USER_AVATAR = `${defineConfig.base}/public/profile.webp`;
+export const USER_AVATAR ="/profile.webp";
 
 // Server and transition settings
 // export const SERVER_URL = "https://Xiesl-comment.netlify.app/.netlify/functions/comment";
