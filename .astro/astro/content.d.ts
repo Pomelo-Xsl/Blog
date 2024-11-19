@@ -152,6 +152,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"2024-11-12(FishVim技能篇).md": {
+	id: "2024-11-12(FishVim技能篇).md";
+  slug: "2024-11-12fishvim技能篇";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "2024-11-12(学习篇).md": {
 	id: "2024-11-12(学习篇).md";
   slug: "2024-11-12学习篇";
@@ -162,13 +169,6 @@ declare module 'astro:content' {
 "2024-11-12(工作篇).md": {
 	id: "2024-11-12(工作篇).md";
   slug: "2024-11-12工作篇";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"2024-11-12(技能篇).md": {
-	id: "2024-11-12(技能篇).md";
-  slug: "2024-11-12技能篇";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -204,6 +204,13 @@ declare module 'astro:content' {
 "2024-11-17(学习篇).md": {
 	id: "2024-11-17(学习篇).md";
   slug: "2024-11-17学习篇";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"2024-11-19（学习篇）.md": {
+	id: "2024-11-19（学习篇）.md";
+  slug: "2024-11-19学习篇";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
