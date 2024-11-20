@@ -11,7 +11,7 @@ export async function GET(context) {
 		site: context.site,
 		items: posts.map((post) => ({
 			...post.data,
-			link: `${defineConfig.base}/blog/${post.slug}/`,
+			link: `${defineConfig.base}blog/${post.slug}/`,
 		})),
 	});
 }

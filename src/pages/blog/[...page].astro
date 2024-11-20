@@ -63,7 +63,7 @@ const pageLinks = generatePageLinks(totalPages);
           title={post.data.title}
           image={post.data.image}
           desc={post.data.description}
-          url={`${defineConfig.base}/blog/` + post.slug}
+          url={`${defineConfig.base}blog/` + post.slug}
           pubDate={post.data.pubDate}
           badge={post.data.badge}
           categories={post.data.categories}
@@ -112,7 +112,7 @@ const pageLinks = generatePageLinks(totalPages);
                         <a
                           title={hidden}
                           aria-label={hidden}
-                          href={hidden === "1" ? `${defineConfig.base}/blog` : `${defineConfig.base}/blog/${hidden}`}
+                          href={hidden === "1" ? `${defineConfig.base}blog` : `${defineConfig.base}blog/${hidden}`}
                           class={`menu-item bg-base-100 ${hidden === page.current ? "btn-active" : ""}`}
                         >
                           {hidden}
@@ -125,7 +125,7 @@ const pageLinks = generatePageLinks(totalPages);
                 <a
                   title={link}
                   aria-label={link}
-                  href={link === "1" ? `${defineConfig.base}/blog` : `${defineConfig.base}/blog/${link}`}
+                  href={link === "1" ? `${defineConfig.base}blog` : `${defineConfig.base}blog/${link}`}
                   class={`join-item btn bg-base-100 ${link === page.current ? "btn-active" : ""}`}
                 >
                   {link}
@@ -138,7 +138,7 @@ const pageLinks = generatePageLinks(totalPages);
             <a
               title={link}
               aria-label={link}
-              href={link === "1" ? `${defineConfig.base}/blog` : `${defineConfig.base}/blog/${link}`}
+              href={link === "1" ? `${defineConfig.base}blog` : `${defineConfig.base}blog/${link}`}
               class={`join-item btn bg-base-100 ${link === page.current ? "btn-active" : ""}`}
             >
               {link}
