@@ -15,7 +15,7 @@ export async function getTagsWithCounts(): Promise<TagCount[]> {
 
   posts.forEach((post) => {
     const tags = post.data.categories || [];
-    tags.forEach((category) => {
+    tags.forEach((category: string) => {
       tagMap.set(category, (tagMap.get(category) || 0) + 1);
     });
   });

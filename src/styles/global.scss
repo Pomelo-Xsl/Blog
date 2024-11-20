@@ -45,7 +45,7 @@ a {
 
 .alert,
 .collapse,
-.diff{
+.diff {
   @apply my-2;
 }
 
@@ -55,6 +55,7 @@ html[data-theme="dracula"] {
   --pagefind-ui-background: oklch(var(--b1));
   --pagefind-ui-border: oklch(var(--n));
   --pagefind-ui-tag: oklch(var(--b1));
+
   .highlight,
   .frosti-code,
   .frosti-code span {
@@ -63,6 +64,7 @@ html[data-theme="dracula"] {
     font-weight: var(--shiki-dark-font-weight) !important;
     text-decoration: var(--shiki-dark-text-decoration) !important;
   }
+
   .highlight-tools {
     background-color: oklch(var(--n)) !important;
   }
@@ -74,7 +76,7 @@ body {
 }
 
 summary {
-  list-style: none; 
+  list-style: none;
 }
 
 @media (max-width: 720px) {
@@ -103,6 +105,7 @@ li::marker,
 .toc-number {
   color: oklch(var(--a));
 }
+
 thead {
   color: oklch(var(--s));
 }
@@ -196,7 +199,7 @@ thead th {
   border-bottom: 3px solid oklch(var(--bc) / 0.25);
 }
 
-.card figure{
+.card figure {
   @apply block;
   @apply relative;
 }
@@ -223,17 +226,17 @@ thead th {
   background-color: oklch(var(--nc));
 }
 
-.highlight-code{
+.highlight-code {
   @apply flex;
 }
 
-.highlight-code .code{
+.highlight-code .code {
   @apply flex-auto;
   overflow: auto;
   padding-right: 4em;
 }
 
-.highlight-code .gutter{
+.highlight-code .gutter {
   @apply flex-none text-right;
   user-select: none;
   border-right: 1px solid #888;
@@ -244,7 +247,7 @@ thead th {
   user-select: none;
 }
 
-.menu-item summary::after{
+.menu-item summary::after {
   position: absolute;
 }
 
@@ -256,7 +259,7 @@ thead th {
   @apply my-2 leading-normal;
 }
 
-.timeline{
+.timeline {
   @apply pl-0;
 }
 
@@ -264,6 +267,14 @@ thead th {
   @apply my-0 leading-none;
 }
 
-.footnotes{
+.footnotes {
   @apply alert;
 }
+
+.ResumeBar {
+  background: #E4E4E4;
+  width: 100%;
+  margin: 0 0 0 0;
+}
+
+

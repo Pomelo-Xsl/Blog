@@ -1,0 +1,26 @@
+---
+title: 简历
+description: 关于我的个人简历
+pubDate: 2024 11 20
+categories:
+  - 学习
+tags:
+  - 简历
+  - 工作
+image: https://media.istockphoto.com/id/178149253/zh/%E7%85%A7%E7%89%87/deep-space-background.jpg?s=612x612&w=0&k=20&c=NhHQbdzkfVEYSc1fx83xpZqajY-HQzf2oEEvv7qdytQ=
+---
+
+import ResumeBar from "../../components/resume/ResumeBar.astro";
+import ImageComponent from "../../components/resume/ImageComponent.astro";
+
+
+<div>
+    <ImageComponent
+      src={`${import.meta.env.BASE_URL}Top.jpg`}
+      alt="个人照片"
+      width="154"
+      height="154"
+    /> 
+    
+</div>
+<ResumeBar>教育经历</ResumeBar>
