@@ -5,7 +5,7 @@ import License from "../components/License.astro";
 import CommentWaline from "./CommentWaline.astro";
 import { DATE_FORMAT, infoTest } from "../consts";
 import type { CardInfo } from "../types";
-import defineConfig from "../../astro.config.mjs";
+//import defineConfig from "../../astro.config.mjs";
 import { defineCollection } from "astro:content";
 
 const {
@@ -59,7 +59,7 @@ const hasTags = tags && tags.length > 0;
                 categories.map((categoroy) => (
                   <>
                     <a
-                      href={`${defineConfig.base}blog/categories/${categoroy}`}
+                      href={`${import.meta.env.BASE_URL}blog/categories/${categoroy}`}
                       class="btn btn-xs btn-accent"
                     >
                       {categoroy}
@@ -76,7 +76,7 @@ const hasTags = tags && tags.length > 0;
                 tags.map((tag) => (
                   <>
                     <a
-                      href={`${defineConfig.base}blog/tag/${tag}`}
+                      href={`${import.meta.env.BASE_URL}blog/tag/${tag}`}
                       class="btn btn-xs btn-secondary"
                     >
                       {tag}

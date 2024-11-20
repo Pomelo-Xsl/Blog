@@ -4,7 +4,7 @@ import Menu from "../components/ProfileCardMenu.astro";
 import Footer from "../components/ProfileCardFooter.astro";
 import { USER_AVATAR } from "../consts";
 //import { defineConfig } from "astro/config";
-import defineConfig from "../../astro.config.mjs";
+//import defineConfig from "../../astro.config.mjs";
 ---
 
 <div
@@ -16,7 +16,7 @@ import defineConfig from "../../astro.config.mjs";
       format="webp"
       width={300}
       height={300}
-      src={`${defineConfig.base}${USER_AVATAR}`}
+      src={`${import.meta.env.BASE_URL}${USER_AVATAR}`}
       alt="Profile"
       loading="eager"
     />

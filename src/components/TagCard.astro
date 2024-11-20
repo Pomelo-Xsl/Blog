@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import { infoTest } from "../consts";
-import defineConfig from "../../astro.config.mjs";
+//import defineConfig from "../../astro.config.mjs";
 
 interface TagCount {
   tag: string;
@@ -35,7 +35,7 @@ const tagsWithCounts = await getTagsWithCounts();
     {
       tagsWithCounts.map(({ tag, count }) => (
         <span class="inline">
-          <a href={`${defineConfig.base}blog/tag/${tag}`} class="btn btn-sm">
+          <a href={`${import.meta.env.BASE_URL}blog/tag/${tag}`} class="btn btn-sm">
             {tag}
             <div class="badge badge-secondary">{count}</div>
           </a>

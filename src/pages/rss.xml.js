@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import defineConfig from "../../astro.config.mjs";
+//import defineConfig from "../../astro.config.mjs";
 
 export async function GET(context) {
 	const posts = await getCollection('blog');
@@ -11,7 +11,7 @@ export async function GET(context) {
 		site: context.site,
 		items: posts.map((post) => ({
 			...post.data,
-			link: `${defineConfig.base}blog/${post.slug}/`,
+			link: `${import.meta.env.BASE_URL}blog/${post.slug}/`,
 		})),
 	});
 }
