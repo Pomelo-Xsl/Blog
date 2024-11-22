@@ -222,9 +222,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"2024-11-22(Python学习篇).md": {
+	id: "2024-11-22(Python学习篇).md";
+  slug: "2024-11-22python学习篇";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "2024-11-22(学习篇).md": {
 	id: "2024-11-22(学习篇).md";
   slug: "2024-11-22学习篇";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"2024-11-22(整理旧知识学习篇).md": {
+	id: "2024-11-22(整理旧知识学习篇).md";
+  slug: "2024-11-22整理旧知识学习篇";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
