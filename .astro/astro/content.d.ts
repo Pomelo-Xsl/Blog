@@ -250,8 +250,8 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"2024-11-23(js学习篇).md": {
-	id: "2024-11-23(js学习篇).md";
+"2024-11-23(Js学习篇).md": {
+	id: "2024-11-23(Js学习篇).md";
   slug: "2024-11-23js学习篇";
   body: string;
   collection: "blog";
