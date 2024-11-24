@@ -257,6 +257,20 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"2024-11-24(测试前置基础知识总结).md": {
+	id: "2024-11-24(测试前置基础知识总结).md";
+  slug: "2024-11-24测试前置基础知识总结";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"2024-11-24(混淆知识卷王版).md": {
+	id: "2024-11-24(混淆知识卷王版).md";
+  slug: "2024-11-24混淆知识卷王版";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "个人简历.mdx": {
 	id: "个人简历.mdx";
   slug: "个人简历";
