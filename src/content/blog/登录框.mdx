@@ -1,0 +1,102 @@
+---
+title: 登录框
+description: 关于bolg的登录框
+pubDate: 2024 11 25
+categories:
+  - 学习
+tags:
+  - 小组件
+  - 登录框
+image: https://tu.sioe.cn/gj/qiege/image.jpg
+---
+
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .login-container {
+            width: 300px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* 为绝对定位做准备 */
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #5cb85c;
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #4cae4c;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 20px; /* 为备案号和公安网号添加上边距 */
+            color: #888; /* 文字颜色为灰色 */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>登录</h2>
+        <form id="loginForm" method="post">
+            <div class="form-group">
+                <label for="username">用户名：</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">密码：</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">登录</button>
+            </div>
+        </form>
+        <div class="footer">
+            备案号：粤ICP备2024340347号<br>
+            公安网安备：XXXX-XXXXXX
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // 阻止表单默认提交行为
+            alert('登录失败，请检查你的用户名和密码。'); // 弹出警告框
+        });
+    </script>
+</body>
+</html>
+```
