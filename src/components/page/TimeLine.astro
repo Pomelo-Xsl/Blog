@@ -12,7 +12,7 @@ const { items } = Astro.props;
 <ul class="timeline timeline-vertical m-0 p-0">
   {
     items.map((item, index) => (
-      <li>{index !== 0 && <hr class="bg-neutral-content" />}
+      <li>{<hr class="bg-neutral-content" />} 
         {index % 2 === 0 ? (
         <div class="timeline-start"><time class="font-mono italic">{item.year}</time></div>
         <div class="timeline-middle">
@@ -46,7 +46,7 @@ const { items } = Astro.props;
           </svg>
         </div>
         <div class="timeline-end"><time class="font-mono italic">{item.year}</time></div>)}
-        <hr class="bg-neutral-content" />
+        {index !== (items.length - 1) && <hr class="bg-neutral-content" />}
       </li>
     ))
   }
