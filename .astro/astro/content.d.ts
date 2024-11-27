@@ -278,6 +278,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"2024-11-27(简易web服务器).md": {
+	id: "2024-11-27(简易web服务器).md";
+  slug: "2024-11-27简易web服务器";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "个人简历.mdx": {
 	id: "个人简历.mdx";
   slug: "个人简历";
