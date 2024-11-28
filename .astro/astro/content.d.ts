@@ -187,9 +187,9 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"2024-11-13(学习篇).md": {
-	id: "2024-11-13(学习篇).md";
-  slug: "2024-11-13学习篇";
+"2024-11-13(部署blog学习篇).md": {
+	id: "2024-11-13(部署blog学习篇).md";
+  slug: "2024-11-13部署blog学习篇";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -281,6 +281,13 @@ declare module 'astro:content' {
 "2024-11-27(简易web服务器).md": {
 	id: "2024-11-27(简易web服务器).md";
   slug: "2024-11-27简易web服务器";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"2024-11-28（使用docker部署python容器）.md": {
+	id: "2024-11-28（使用docker部署python容器）.md";
+  slug: "2024-11-28使用docker部署python容器";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
