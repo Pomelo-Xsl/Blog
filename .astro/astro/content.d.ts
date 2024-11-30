@@ -292,6 +292,27 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"2024-11-29(进程-线程-协程).md": {
+	id: "2024-11-29(进程-线程-协程).md";
+  slug: "2024-11-29进程-线程-协程";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"2024-11-29（nvim安装和配置）.md": {
+	id: "2024-11-29（nvim安装和配置）.md";
+  slug: "2024-11-29nvim安装和配置";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"2024-12-01(遗留的配置ip和域名的https问题).md": {
+	id: "2024-12-01(遗留的配置ip和域名的https问题).md";
+  slug: "2024-12-01遗留的配置ip和域名的https问题";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "个人简历.mdx": {
 	id: "个人简历.mdx";
   slug: "个人简历";
