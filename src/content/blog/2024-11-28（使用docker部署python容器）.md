@@ -6,7 +6,7 @@ categories:
   - 学习
 tags:
   - dockers
-  - python
+  - Python
 image: https://www.llanjing.com/wp-content/uploads/2020/07/daisy-5383056_640.jpg
 ---
 
