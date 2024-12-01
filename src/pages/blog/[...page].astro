@@ -10,14 +10,14 @@ import defineConfig from "../../../astro.config.mjs";
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
   const posts = await getCollection("blog");
-  const topPosts = posts.filter((post) => post.data.badge === "置顶");
-  const otherPosts = posts.filter((post) => post.data.badge !== "置顶");
-  topPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  const topPosts = posts.filter((post: { data: { badge: string; }; }) => post.data.badge === "置顶");
+  const otherPosts = posts.filter((post: { data: { badge: string; }; }) => post.data.badge !== "置顶");
+  topPosts.sort((a: { data: { pubDate: number; }; }, b: { data: { pubDate: number; }; }) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
   otherPosts.sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    (a: { data: { pubDate: number; }; }, b: { data: { pubDate: number; }; }) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
   );
   const sortedPosts = [...topPosts, ...otherPosts];
-  return paginate(sortedPosts, { pageSize: 8 });
+  return paginate(sortedPosts, { pageSize: 6 });
 }
 
 const { page }: { page: Page } = Astro.props;
@@ -63,7 +63,7 @@ const pageLinks = generatePageLinks(totalPages);
           title={post.data.title}
           image={post.data.image}
           desc={post.data.description}
-          url={`${import.meta.env.BASE_URL}blog/` + post.slug}
+          url={`${import.meta.env.BASE_URL}/blog/` + post.slug}
           pubDate={post.data.pubDate}
           badge={post.data.badge}
           categories={post.data.categories}
@@ -75,7 +75,7 @@ const pageLinks = generatePageLinks(totalPages);
   </div>
   <div class="flex justify-between mb-8">
     <a
-      href={page.url.prev ? page.url.prev : `javascript:`}
+      href={`${import.meta.env.BASE_URL}` + page.url.prev ? `${import.meta.env.BASE_URL}` + page.url.prev : `javascript:`}
       class={page.url.prev
         ? `btn bg-base-100 shadow-xl`
         : `btn btn-disabled bg-base-100 shadow-xl`}
@@ -112,7 +112,11 @@ const pageLinks = generatePageLinks(totalPages);
                         <a
                           title={hidden}
                           aria-label={hidden}
-                          href={hidden === "1" ? `${import.meta.env.BASE_URL}blog` : `${import.meta.env.BASE_URL}blog/${hidden}`}
+                          href={
+                            hidden === "1"
+                              ? `${import.meta.env.BASE_URL}/blog`
+                              : `${import.meta.env.BASE_URL}/blog/${hidden}`
+                          }
                           class={`menu-item bg-base-100 ${hidden === page.current ? "btn-active" : ""}`}
                         >
                           {hidden}
@@ -125,12 +129,16 @@ const pageLinks = generatePageLinks(totalPages);
                 <a
                   title={link}
                   aria-label={link}
-                  href={link === "1" ? `${import.meta.env.BASE_URL}blog` : `${import.meta.env.BASE_URL}blog/${link}`}
+                  href={
+                    link === "1"
+                      ? `${import.meta.env.BASE_URL}/blog`
+                      : `${import.meta.env.BASE_URL}/blog/${link}`
+                  }
                   class={`join-item btn bg-base-100 ${link === page.current ? "btn-active" : ""}`}
                 >
                   {link}
                 </a>
-              )
+              ),
             )}
           </>
         ) : (
@@ -138,7 +146,11 @@ const pageLinks = generatePageLinks(totalPages);
             <a
               title={link}
               aria-label={link}
-              href={link === "1" ? `${import.meta.env.BASE_URL}blog` : `${import.meta.env.BASE_URL}blog/${link}`}
+              href={
+                link === "1"
+                  ? `${import.meta.env.BASE_URL}/blog`
+                  : `${import.meta.env.BASE_URL}/blog/${link}`
+              }
               class={`join-item btn bg-base-100 ${link === page.current ? "btn-active" : ""}`}
             >
               {link}
@@ -148,11 +160,13 @@ const pageLinks = generatePageLinks(totalPages);
       }
     </div>
     <a
-    href={page.url.next ? page.url.next : `javascript:`}
-      class={page.url.next
-        ? `btn bg-base-100 shadow-xl`
-        : `btn btn-disabled bg-base-100 shadow-xl`}
-    >
+      href={`${import.meta.env.BASE_URL}` + page.url.next ? `${import.meta.env.BASE_URL}` + page.url.next : `javascript:`}
+      class={
+        page.url.next
+          ? `btn bg-base-100 shadow-xl`
+          : `btn btn-disabled bg-base-100 shadow-xl`
+      }
+      >
       <span class="hidden lg:inline ml-2">{infoTest.nextPage}</span>
       <svg
         class="h-6 w-6 fill-current md:h-8 md:w-8"

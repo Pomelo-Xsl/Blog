@@ -59,7 +59,7 @@ const hasTags = tags && tags.length > 0;
                 categories.map((categoroy) => (
                   <>
                     <a
-                      href={`${import.meta.env.BASE_URL}blog/categories/${categoroy}`}
+                      href={`${import.meta.env.BASE_URL}/blog/categories/${categoroy}`}
                       class="btn btn-xs btn-accent"
                     >
                       {categoroy}
@@ -76,7 +76,7 @@ const hasTags = tags && tags.length > 0;
                 tags.map((tag) => (
                   <>
                     <a
-                      href={`${import.meta.env.BASE_URL}blog/tag/${tag}`}
+                      href={`${import.meta.env.BASE_URL}/blog/tag/${tag}`}
                       class="btn btn-xs btn-secondary"
                     >
                       {tag}

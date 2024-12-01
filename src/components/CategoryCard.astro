@@ -35,7 +35,7 @@ const tagsWithCounts = await getTagsWithCounts();
     {
       tagsWithCounts.map(({ category, count }) => (
         <span class="inline">
-          <a href={`${import.meta.env.BASE_URL}blog/categories/${category}`} class="btn btn-sm">
+          <a href={`${import.meta.env.BASE_URL}/blog/categories/${category}`} class="btn btn-sm">
             {category}
             <div class="badge badge-accent">{count}</div>
           </a>

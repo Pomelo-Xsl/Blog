@@ -37,7 +37,7 @@ const target = "_self";
               categories.map((categoroy) => (
                 <>
                   <a
-                    href={`${import.meta.env.BASE_URL}blog/categories/${categoroy}`}
+                    href={`${import.meta.env.BASE_URL}/blog/categories/${categoroy}`}
                     class="btn btn-xs btn-accent"
                   >
                     {categoroy}
@@ -55,7 +55,7 @@ const target = "_self";
             hasTags ? (
               tags.map((tag) => (
                 <>
-                  <a href={`${import.meta.env.BASE_URL}blog/tag/${tag}`} class="btn btn-xs btn-secondary">
+                  <a href={`${import.meta.env.BASE_URL}/blog/tag/${tag}`} class="btn btn-xs btn-secondary">
                     {tag}
                   </a>
                   <span>&thinsp;</span>
