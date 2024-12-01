@@ -10,11 +10,11 @@ import defineConfig from "../../../astro.config.mjs";
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
   const posts = await getCollection("blog");
-  const topPosts = posts.filter((post: { data: { badge: string; }; }) => post.data.badge === "置顶");
-  const otherPosts = posts.filter((post: { data: { badge: string; }; }) => post.data.badge !== "置顶");
-  topPosts.sort((a: { data: { pubDate: number; }; }, b: { data: { pubDate: number; }; }) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  const topPosts = posts.filter((post: any ) => post.data.badge === "置顶");
+  const otherPosts = posts.filter((post: any) => post.data.badge !== "置顶");
+  topPosts.sort((a: { data: { pubDate: Date; }; }, b: { data: { pubDate: Date; }; }) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
   otherPosts.sort(
-    (a: { data: { pubDate: number; }; }, b: { data: { pubDate: number; }; }) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+    (a: { data: { pubDate: Date; }; }, b: { data: { pubDate: Date; }; }) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
   );
   const sortedPosts = [...topPosts, ...otherPosts];
   return paginate(sortedPosts, { pageSize: 6 });
