@@ -62,7 +62,7 @@ const pageLinks = generatePageLinks(totalPages);
           title={post.data.title}
           image={post.data.image}
           desc={post.data.description}
-          url={`${import.meta.env.BASE_URL}/blog/` + post.slug}
+          url={`${import.meta.env.BASE_URL}blog/` + post.slug}
           pubDate={post.data.pubDate}
           badge={post.data.badge}
           categories={post.data.categories}
@@ -113,8 +113,8 @@ const pageLinks = generatePageLinks(totalPages);
                           aria-label={hidden}
                           href={
                             hidden === "1"
-                              ? `${import.meta.env.BASE_URL}/blog/categories/${params.category}`
-                              : `${import.meta.env.BASE_URL}/blog/categories/${params.category}/${hidden}`
+                              ? `${import.meta.env.BASE_URL}blog/categories/${params.category}`
+                              : `${import.meta.env.BASE_URL}blog/categories/${params.category}/${hidden}`
                           }
                           class={`menu-item bg-base-100 ${hidden === page.current ? "btn-active" : ""}`}
                         >
@@ -130,8 +130,8 @@ const pageLinks = generatePageLinks(totalPages);
                   aria-label={link}
                   href={
                     link === "1"
-                      ? `${import.meta.env.BASE_URL}/blog/categories/${params.category}`
-                      : `${import.meta.env.BASE_URL}/blog/categories/${params.category}/${link}`
+                      ? `${import.meta.env.BASE_URL}blog/categories/${params.category}`
+                      : `${import.meta.env.BASE_URL}blog/categories/${params.category}/${link}`
                   }
                   class={`join-item btn bg-base-100 ${link === page.current ? "btn-active" : ""}`}
                 >
@@ -147,8 +147,8 @@ const pageLinks = generatePageLinks(totalPages);
               aria-label={link}
               href={
                 link === "1"
-                  ? `${import.meta.env.BASE_URL}/blog/categories/${params.category}`
-                  : `${import.meta.env.BASE_URL}/blog/categories/${params.category}/${link}`
+                  ? `${import.meta.env.BASE_URL}blog/categories/${params.category}`
+                  : `${import.meta.env.BASE_URL}blog/categories/${params.category}/${link}`
               }
               class={`join-item btn bg-base-100 ${link === page.current ? "btn-active" : ""}`}
             >

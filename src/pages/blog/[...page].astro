@@ -63,7 +63,7 @@ const pageLinks = generatePageLinks(totalPages);
           title={post.data.title}
           image={post.data.image}
           desc={post.data.description}
-          url={`${import.meta.env.BASE_URL}/blog/` + post.slug}
+          url={`${import.meta.env.BASE_URL}blog/` + post.slug}
           pubDate={post.data.pubDate}
           badge={post.data.badge}
           categories={post.data.categories}
@@ -75,7 +75,7 @@ const pageLinks = generatePageLinks(totalPages);
   </div>
   <div class="flex justify-between mb-8">
     <a
-      href={`${import.meta.env.BASE_URL}` + page.url.prev ? `${import.meta.env.BASE_URL}` + page.url.prev : `javascript:`}
+      href={`/blog` + page.url.prev ? `/blog` + page.url.prev : `javascript:`}
       class={page.url.prev
         ? `btn bg-base-100 shadow-xl`
         : `btn btn-disabled bg-base-100 shadow-xl`}
@@ -114,8 +114,8 @@ const pageLinks = generatePageLinks(totalPages);
                           aria-label={hidden}
                           href={
                             hidden === "1"
-                              ? `${import.meta.env.BASE_URL}/blog`
-                              : `${import.meta.env.BASE_URL}/blog/${hidden}`
+                              ? `${import.meta.env.BASE_URL}blog`
+                              : `${import.meta.env.BASE_URL}blog/${hidden}`
                           }
                           class={`menu-item bg-base-100 ${hidden === page.current ? "btn-active" : ""}`}
                         >
@@ -131,8 +131,8 @@ const pageLinks = generatePageLinks(totalPages);
                   aria-label={link}
                   href={
                     link === "1"
-                      ? `${import.meta.env.BASE_URL}/blog`
-                      : `${import.meta.env.BASE_URL}/blog/${link}`
+                      ? `${import.meta.env.BASE_URL}blog`
+                      : `${import.meta.env.BASE_URL}blog/${link}`
                   }
                   class={`join-item btn bg-base-100 ${link === page.current ? "btn-active" : ""}`}
                 >
@@ -148,8 +148,8 @@ const pageLinks = generatePageLinks(totalPages);
               aria-label={link}
               href={
                 link === "1"
-                  ? `${import.meta.env.BASE_URL}/blog`
-                  : `${import.meta.env.BASE_URL}/blog/${link}`
+                  ? `${import.meta.env.BASE_URL}blog`
+                  : `${import.meta.env.BASE_URL}blog/${link}`
               }
               class={`join-item btn bg-base-100 ${link === page.current ? "btn-active" : ""}`}
             >
@@ -160,7 +160,7 @@ const pageLinks = generatePageLinks(totalPages);
       }
     </div>
     <a
-      href={`${import.meta.env.BASE_URL}` + page.url.next ? `${import.meta.env.BASE_URL}` + page.url.next : `javascript:`}
+      href={`/blog` + page.url.next ? `/blog` + page.url.next : `javascript:`}
       class={
         page.url.next
           ? `btn bg-base-100 shadow-xl`
