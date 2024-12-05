@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 嵌入图片(有两个标签看不懂其实不影响) -->
+<figure>
+  <img
+    src="images/dinosaur.jpg"
+    alt="The head and torso of a dinosaur skeleton;
+            it has a large head with long sharp teeth"
+    width="400"
+    height="341" />
+
+  <figcaption>
+    A T-Rex on display in the Manchester University Museum.
+  </figcaption>
+</figure>
+<!-- 嵌入视频    -->
+<video
+  controls
+  width="400"
+  height="400"
+  autoplay
+  loop
+  muted
+  preload="auto"
+  poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>你的浏览器不支持此视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
+</video>
+<!-- 嵌入音频 -->
+<audio controls>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>你的浏览器不支持该音频，可点击<a href="viper.mp3">此链接</a>收听。</p>
+</audio>
+<!-- 显示视频文本 -->
+<hr />
+<video controls>
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish" />
+</video>
+<!-- 通过 <iframe> 元素将其他 Web 文档嵌入到当前文档中 -->
+<hr />
+<head>
+  <style>
+    iframe {
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <iframe
+    src="https://developer.mozilla.org/zh-CN/docs/Glossary"
+    width="100%"
+    height="500"
+    allowfullscreen
+    sandbox>
+    <p>
+      <a href="/zh-CN/docs/Glossary">
+        为不支持 iframe 的浏览器预留的后备链接
+      </a>
+    </p>
+  </iframe>
+</body>
+<!-- 将 PDF 文件嵌入网页 -->
+<object data="mypdf.pdf" type="application/pdf" width="800" height="1200">
+  <p>
+    You don't have a PDF plugin, but you can
+    <a href="mypdf.pdf">download the PDF file. </a>
+  </p>
+</object>
+
+</body>
+</html>

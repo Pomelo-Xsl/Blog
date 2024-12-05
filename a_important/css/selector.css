@@ -1,0 +1,39 @@
+/* 选择器 */
+/* 选择器列表 */
+h1,
+.special {
+  color: blue;
+}
+/* 类型、类和 ID 选择器 */
+h1 {
+    font-size: 24px;
+}
+.box {
+    background-color: yellow;
+}
+#unique {
+    font-weight: bold;
+}
+/* 标签属性选择器 */
+a[title] {
+    text-decoration: underline;
+}
+a[href="https://example.com"]
+{
+    color: red;
+}
+/* 伪类:样式化一个元素的特定状态 ,例如:hover伪类会在鼠标指针悬浮到一个元素上的时候选择这个元素*/
+a:hover {
+    color: green;
+}
+/* 伪元素:样式化一个元素的某个部分，例如::first-line会选择一个元素的第一行。*/
+p::first-line {
+    font-weight: bold;
+}
+
+/* 运算符 */
+/* 将其他选择器组合起来，更复杂的选择元素 */
+/* 用运算符（>）选择了<article>元素的初代子元素 */
+article > p {
+    color: red;
+}

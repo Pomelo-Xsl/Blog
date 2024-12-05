@@ -1,0 +1,65 @@
+/* 样式化 HTML 元素 */
+h1 {
+  color: red;
+}
+
+/* 使用 CSS 为文档添加样式的几种方法 */
+
+/* 改变元素的默认行为 */
+li {
+  list-style-type: none;
+}
+
+/* 使用类名 */
+/* <ul>
+  <li>项目一</li>
+  <li class="special">项目二</li>         这个 li 元素的类名为 "special"
+  <li>项目 <em>三</em></li>
+</ul> */
+.special {
+  color: orange;
+  font-weight: bold;
+}
+/* 每个 special 类的 li 元素 和 span 元素都会被特殊处理。 */
+li.special,
+span.special {
+  color: orange;
+  font-weight: bold;
+}
+
+/* 根据元素在文档中的位置确定样式 */
+li em {
+  color: rebeccapurple;
+}
+/* 相邻选择符,有点难理解,就是将h1和p变成相同的层级 */
+h1 + p {
+  font-size: 200%;
+}
+
+/* 根据状态确定样式 */
+/* 没有被访问的链接颜色变为粉色、访问过的链接变为绿色 */
+a:link {
+  color: pink;
+}
+
+a:visited {
+  color: green;
+}
+
+/* CSS 语言有一些规则来控制在发生冲突的情况下哪个选择器更强大。这些规则被称为层叠（cascade）和优先级（specificity）。 */
+
+/* CSS的组成 */
+/* 选择器、属性和值 */
+
+/* 函数 */
+/* calc() 函数,这个函数允许在 CSS 中进行简单的计算 */
+/* Transform 函数,这个函数允许对元素进行平移、缩放、旋转、倾斜等操作 */
+
+/* @规则   CSS 的 @rules（读作“at-rules”）是一些特殊的规则，提供了关于 CSS 应该执行什么或如何表现的指令 */
+/* @import 规则，允许在一个样式表中导入另一个样式表 */
+/* @media 规则，允许根据不同的媒体类型（例如屏幕大小、打印机、音频输出设备）来应用不同的样式 */
+/* @font-face 规则，允许在 CSS 中定义字体 */
+/* 等等 */
+
+/* 简写属性 */
+/* 一些属性，如 font、background、padding、border 和 margin 等属性称为简写属性。它们允许在一行中设置多个属性值，从而节省时间并使代码更整洁 */

@@ -1,0 +1,59 @@
+/* 通用样式设置 */
+*{
+    box-sizing: border-box; /*标准盒模型*/
+}
+
+/* 页面主体样式 */
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 容器样式 */
+.container{
+    display: flex;
+    width: 90%;
+}
+
+/* 面板样式 */
+.panel{
+    background-size: cover;
+    background-position: center;
+    height: 80vh; 
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    /* 此 CSS 规则用于设置元素在弹性布局中的占据空间比例 */  
+        flex:0.5;  
+    /* 这里设置的值为 0.5，表示元素占据可用空间的一半 */
+    margin: 10px;
+    position: relative;
+    transition: all 700ms ease-in;
+}
+
+/* 面板标题样式 */
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+/* 活动面板样式 */
+.panel.active{
+    /* 
+        设置元素在弹性容器中的占比为5份，将其他元素的占比作为比例参考。
+    */
+        flex:5;
+}
+
+/* 活动面板标题样式 */
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4;
+}

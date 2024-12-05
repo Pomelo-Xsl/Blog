@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/* 全局设置 */
+* {
+  box-sizing: border-box;
+}
+
+/* body样式 */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #333;
+  color: #222;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* 容器样式 */
+.container {
+  background-color: #fafafa;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+/* 显示导航时的容器变换 */
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+/* 圆形容器样式 */
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+/* 圆形样式 */
+.circle {
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+/* 显示导航时的圆形变换 */
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+/* 圆形内按钮样式 */
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+/* 按钮聚焦样式 */
+.circle button:focus {
+  outline: none;
+}
+
+/* 打开按钮样式 */
+.circle button#open {
+  left: 60%;
+}
+
+/* 关闭按钮样式 */
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+/* 显示导航时的导航链接变换 */
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+/* 导航样式 */
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+/* 导航列表样式 */
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+/* 导航列表项样式 */
+nav ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+/* 导航图标样式 */
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* 后续导航项的样式 */
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+/* 再后续导航项的样式 */
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+/* 导航链接样式 */
+nav a{
+  color: #fafafa;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+/* 导航链接悬停样式 */
+nav a:hover {
+  color: #FF7979;
+  font-weight: bold;
+}
+
+/* 内容图片样式 */
+.content img {
+  max-width: 100%;
+}
+
+/* 内容容器样式 */
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+/* 内容标题样式 */
+.content h1 {
+  margin: 0;
+}
+
+/* 内容副标题样式 */
+.content small {
+  color: #555;
+  font-style: italic;
+}
+
+/* 内容段落样式 */
+.content p {
+  color: #333;
+  line-height: 1.5;
+}
