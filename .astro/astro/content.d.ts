@@ -313,6 +313,27 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"2024-12-07（英语学习篇）.md": {
+	id: "2024-12-07（英语学习篇）.md";
+  slug: "2024-12-07英语学习篇";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"2024-12-08（健身计划书).md": {
+	id: "2024-12-08（健身计划书).md";
+  slug: "2024-12-08健身计划书";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"2024-12-11(MyKepMap安装).md": {
+	id: "2024-12-11(MyKepMap安装).md";
+  slug: "2024-12-11mykepmap安装";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "个人简历.mdx": {
 	id: "个人简历.mdx";
   slug: "个人简历";
