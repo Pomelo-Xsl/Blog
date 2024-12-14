@@ -334,6 +334,34 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"2024-12-12(css笔记工作篇).md": {
+	id: "2024-12-12(css笔记工作篇).md";
+  slug: "2024-12-12css笔记工作篇";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"2024-12-12(js笔记工作篇).md": {
+	id: "2024-12-12(js笔记工作篇).md";
+  slug: "2024-12-12js笔记工作篇";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"2024-12-13(web面试题1工作篇).md": {
+	id: "2024-12-13(web面试题1工作篇).md";
+  slug: "2024-12-13web面试题1工作篇";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"2024-12-13(web面试题2工作篇).md": {
+	id: "2024-12-13(web面试题2工作篇).md";
+  slug: "2024-12-13web面试题2工作篇";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "个人简历.mdx": {
 	id: "个人简历.mdx";
   slug: "个人简历";
