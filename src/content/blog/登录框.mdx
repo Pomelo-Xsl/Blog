@@ -12,91 +12,164 @@ image: https://tu.sioe.cn/gj/qiege/image.jpg
 
 ```html
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录页面</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        .login-container {
-            width: 300px;
-            margin: 100px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: relative; /* 为绝对定位做准备 */
-        }
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 3px;
-        }
-        .form-group button {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            background-color: #5cb85c;
-            color: #fff;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        .form-group button:hover {
-            background-color: #4cae4c;
-        }
-        .footer {
-            text-align: center;
-            font-size: 12px;
-            margin-top: 20px; /* 为备案号和公安网号添加上边距 */
-            color: #888; /* 文字颜色为灰色 */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>My Blog Index Mode Template</title>
 </head>
+
 <body>
-    <div class="login-container">
-        <h2>登录</h2>
-        <form id="loginForm" method="post">
-            <div class="form-group">
-                <label for="username">用户名：</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">密码：</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <button type="submit">登录</button>
-            </div>
-        </form>
-        <div class="footer">
-            备案号：粤ICP备2024340347号<br>
-            公安网安备：XXXX-XXXXXX
-        </div>
-    </div>
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // 阻止表单默认提交行为
-            alert('登录失败，请检查你的用户名和密码。'); // 弹出警告框
-        });
-    </script>
+  <div class="container">
+    <h1>Please Login</h1>
+    <form id="loginForm" method="post">
+      <div class="form-control">
+        <input type="text" required>
+        <label>Username</label>
+      </div>
+
+      <div class="form-control">
+        <input type="password" required>
+        <label>Password</label>
+      </div>
+      <button class="btn" type="submit">Login</button>
+      <p class="text">Don't have an account? <a href="#">Register</a> </p>
+    </form>
+  </div>
+  <div class="footer">
+    备案号：粤ICP备2024340347号<br>
+    公安网安备：XXXX-XXXXXX
+  </div>
+  <script src="script.js"></script>
 </body>
+
 </html>
+```
+```css
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: steelblue;
+  color: #fff;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: lightblue;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.text {
+  margin-top: 30px;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+  /* 为备案号和公安网号添加上边距 */
+  color: #fff;
+  /* 文字颜色为白色 */
+}
+```
+```javascript
+const labels = document.querySelectorAll('.form-control label')
+
+labels.forEach(label => {
+    label.innerHTML = label.innerText
+        .split('')
+        .map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`)
+        .join('')
+})
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // 阻止表单默认提交行为
+            alert('登录失败，请检查你的用户名和密码'); // 弹出警告框
+        });
 ```
