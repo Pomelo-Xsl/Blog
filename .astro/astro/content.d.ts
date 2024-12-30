@@ -348,6 +348,27 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"2024-12-21(自学Python篇).md": {
+	id: "2024-12-21(自学Python篇).md";
+  slug: "2024-12-21自学python篇";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"2024-12-21（控制台贪吃蛇）.md": {
+	id: "2024-12-21（控制台贪吃蛇）.md";
+  slug: "2024-12-21控制台贪吃蛇";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"2024-12-30(Python解释器).md": {
+	id: "2024-12-30(Python解释器).md";
+  slug: "2024-12-30python解释器";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "个人简历.mdx": {
 	id: "个人简历.mdx";
   slug: "个人简历";
