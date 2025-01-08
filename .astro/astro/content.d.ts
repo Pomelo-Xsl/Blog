@@ -369,6 +369,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"2025-01-04(Python从入门到实践pdf).md": {
+	id: "2025-01-04(Python从入门到实践pdf).md";
+  slug: "2025-01-04python从入门到实践pdf";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "个人简历.mdx": {
 	id: "个人简历.mdx";
   slug: "个人简历";
